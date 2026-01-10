@@ -1,0 +1,29 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: micro-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # Descubre servicios automáticamente
+          lower-case-service-id: true # user-service en vez de USER-SERVICE
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway
