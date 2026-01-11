@@ -1,4 +1,4 @@
-package org.javig.micro_gateway;
+package es.jastxz.micro_gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
