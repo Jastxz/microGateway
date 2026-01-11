@@ -10,8 +10,6 @@ spring:
         locator:
           enabled: true # Descubre servicios automáticamente
           lower-case-service-id: true # user-service en vez de USER-SERVICE
-      default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
 
 eureka:
   client:
@@ -27,3 +25,6 @@ management:
     web:
       exposure:
         include: health,info,gateway
+  endpoint:
+    gateway:
+      access: UNRESTRICTED
