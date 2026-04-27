@@ -22,7 +22,7 @@ public class CorsConfig {
                 // Orígenes permitidos
                 config.setAllowedOrigins(Arrays.asList(
                                 //"http://localhost:5173",
-                                "https://cv.javig.home"));
+                                "https://cv.javig.org"));
 
                 // Métodos permitidos
                 config.setAllowedMethods(Arrays.asList(
