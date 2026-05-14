@@ -29,7 +29,7 @@ public class CorsConfig {
                                 "POST"));
 
                 // Headers permitidos
-                config.setAllowedHeaders(List.of("*"));
+                config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization", "X-Requested-With"));
 
                 // Headers expuestos
                 config.setExposedHeaders(Arrays.asList(
